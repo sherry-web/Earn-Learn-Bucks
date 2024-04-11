@@ -1,210 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="Assets/money.png" />
 
-    <!--Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
     <title>Dashboard</title>
-  </head>
-  <body>
-    <!-- HEADER -->
+</head>
+
+<body>
+
+    <!-- Header Section -->
     <header>
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-xxl">
-          <a class="navbar-brand m-2 ms-5" href="./"><img src="Assets/logo.png" class="img-fluid logo">Earn & Learn</a>
-          <!-- Toggle button for mobile -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#main-nav"
-            aria-controls="main-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Navigation menu -->
-          <div
-            class="collapse navbar-collapse justify-content-end align-center"
-            id="main-nav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="./">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./dashboard.html">Dashboard</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Calendar
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Today</a></li>
-                  <li><a class="dropdown-item" href="#">Week</a></li>
-                  <li><a class="dropdown-item" href="#">Month</a></li>
-                </ul>
-              </li>
-              <li class="nav-item header-balance">
-                <!-- Withdraw Modal button  -->
-                <button
-                  type="button"
-                  class="btn btn-primary nav-balance nav-link"
-                  data-bs-toggle="modal"
-                  data-bs-target="#withdraw-modal">
-                  Balance: (R)<span id="balance-value">0.00</span>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-xxl">
+                <a class="navbar-brand ms-4" href="./"><img src="img/group-1171274987.png" alt="Earn & Learn" class="img-fluid"> Earn & Learn</a>
+                <!-- Navbar toggle button for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-              </li>
-              <li class="nav-item">
-                <button class="nav-link btn btn-primary" id="logoutBtn" onclick="window.location.href = 'index.html';">
-                  Logout
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./logout.html">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-     <!-- Main Content -->
-     <main class="container mt-5">
-      <!-- Dashboard parent Summary -->
-      <div class="row">
-          <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                  <div class="card-body">
-                      <img src="Assets/clipboard-tick.png" alt="Tasks Icon" class="card-icon">
-                      <h5 class="card-title">6 Tasks</h5>
-                      <p class="card-text">Complete within one week</p>
-                      <button class="btn btn-primary">Add Task</button>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                  <div class="card-body">
-                      <img src="Assets/people.png" alt="Members Icon" class="card-icon">
-                      <h5 class="card-title">4 Members</h5>
-                      <p class="card-text">Members within household</p>
-                      <button class="btn btn-primary">Add Member</button>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                  <div class="card-body">
-                      <img src="Assets/calendar.png" alt="Timeline Icon" class="card-icon">
-                      <h5 class="card-title">5 days</h5>
-                      <p class="card-text">Timeline on task</p>
-                      <button class="btn btn-primary">View Calendar</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- PARENT END -->
+    <!-- Main Content Section -->
+    <main class="container mt-5">
+        <div class="row">
+            <!-- Task Summary Cards -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="img/vuesax-linear-clipboard-tick.png" alt="Tasks Icon" class="card-icon">
+                        <h5 class="card-title">6 Tasks</h5>
+                        <p class="card-text">Complete within one week</p>
+                        <button class="btn btn-primary">Add Task</button>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Dashboard KID START-->
-      
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="img/vuesax-linear-people.png" alt="Members Icon" class="card-icon">
+                        <h5 class="card-title">4 Members</h5>
+                        <p class="card-text">Members within household</p>
+                        <button class="btn btn-primary">Add Member</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="img/vuesax-linear-clipboard-tick.png" alt="Timeline Icon" class="card-icon">
+                        <h5 class="card-title">5 Days</h5>
+                        <p class="card-text">Timeline on task</p>
+                        <button class="btn btn-primary">View Calendar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Charts and Graphs -->
         <div class="row mt-4">
-          <div class="col-md-6">
-              <div class="card h-100">
-                  <div class="card-body">
-                      <h5 class="card-title">Completed Task</h5>
-                      <!-- Progress bars -->
-                      <div class="progress-container">
-                          <div class="progress-item">
-                              <span class="progress-label">Jan</span>
-                              <div class="progress">
-                                  <div class="progress-bar" role="progressbar" style="width: 75%;"></div>
-                              </div>
-                              <span class="progress-value">75%</span>
-                          </div>
-                          <div class="progress-item">
-                              <span class="progress-label">Feb</span>
-                              <div class="progress">
-                                  <div class="progress-bar" role="progressbar" style="width: 45%;"></div>
-                              </div>
-                              <span class="progress-value">45%</span>
-                          </div>
-                          <div class="progress-item">
-                              <span class="progress-label">Mar</span>
-                              <div class="progress">
-                                  <div class="progress-bar" role="progressbar" style="width: 60%;"></div>
-                              </div>
-                              <span class="progress-value">60%</span>
-                          </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Completed Tasks</h5>
+                        <div class="progress-container">
+                            <div class="progress-item">
+                                <span class="progress-label">Jan</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%;"></div>
+                                </div>
+                                <span class="progress-value">75%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Feb</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 45%;"></div>
+                                </div>
+                                <span class="progress-value">45%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Mar</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%;"></div>
+                                </div>
+                                <span class="progress-value">55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Upcoming Tasks</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span class="task-label">Task 1:</span>
+                                <span class="task-details">Description of task 1</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="task-label">Task 2:</span>
+                                <span class="task-details">Description of task 2</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="task-label">Task 3:</span>
+                                <span class="task-details">Description of task 3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task History Section -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Task History</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Task Name</th>
+                                        <th>Completed By</th>
+                                        <th>Amount Earned</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Clean room</td>
+                                        <td>Family Member 1</td>
+                                        <td>R15.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wash dishes</td>
+                                        <td>Family Member 2</td>
+                                        <td>R20.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Take out trash</td>
+                                        <td>Family Member 3</td>
+                                        <td>R10.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Withdrawal Request Section -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Withdrawal Request</h5>
+                        <form id="withdrawal-form">
+                            <div class="mb-3">
+                                <label for="withdrawal-name" class="form-label">Name</label>
+                                <input type="text" id="withdrawal-name" name="withdrawal-name" class="form-control" placeholder="Enter your name" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="withdrawal-amount" class="form-label">Amount</label>
+                                <input type="number" id="withdrawal-amount" name="withdrawal-amount" class="form-control" placeholder="Enter amount" required />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Request</button>
+                        </form>
                       </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-md-6">
-              <div class="card h-100">
-                  <div class="card-body">
-                      <h5 class="card-title">Upcoming Tasks</h5>
-                      <ul class="list-group list-group-flush">
-                          <li class="list-group-item">
-                              <span class="task-label">Task 1:</span>
-                              <span class="task-details">Description of task 1</span>
-                          </li>
-                          <li class="list-group-item">
-                              <span class="task-label">Task 2:</span>
-                              <span class="task-details">Description of task 2</span>
-                          </li>
-                          <li class="list-group-item">
-                              <span class="task-label">Task 3:</span>
-                              <span class="task-details">Description of task 3</span>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-
-          <!-- Display Active Task List -->
-        
-    <!-- KID END -->
-
-    <!-- FOOTER -->
-    <footer>
-      <span>2024 Earn & Learn App</span>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
-    <script src="scripts/api.js"></script>
-    <script src="scripts/main.js"></script>
-  </body>
-</html>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <!-- Footer Section -->
+        <footer class="container text-center mt-5">
+            <span>2024 Earn & Learn App</span>
+        </footer>
+    
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts/api.js"></script>
+        <script src="scripts/main.js"></script>
+    
+    </body>
+    
+    </html>
