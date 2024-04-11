@@ -2,7 +2,7 @@
 :root {
     --primary-color: #4caf50; /* Green color */
     --secondary-color: #ff6f61; /* Coral color */
-    --bg-light: #f8f9fa; /* Light white */
+    --bg-light:  #F8F9FA; /* Light white */
     --bg-darkgrey: #333; /* Light gray*/
   }
   
@@ -307,3 +307,5 @@
   footer span:hover {
     text-decoration: underline;
   }
+
+  
