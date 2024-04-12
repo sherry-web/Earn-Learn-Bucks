@@ -2,31 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="Assets/money.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Assets/logo.png">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <title>Dashboard</title>
 </head>
-
 <body>
 
     <!-- Header Section -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-xxl">
-                <a class="navbar-brand ms-4" href="./"><img src="img/group-1171274987.png" alt="Earn & Learn" class="img-fluid"> Earn & Learn</a>
+                <a class="navbar-brand ms-4" href="./">
+                    <img src="Assets/logo.png" alt="Earn & Learn" class="img-fluid"> 
+                    <span>Earn & Learn</span>
+                </a>
                 <!-- Navbar toggle button for mobile view -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,10 +36,7 @@
                             <a class="nav-link" href="./">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./login.html">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./logout.html">Logout</a>
+                            <a class="nav-link" href="./index.html">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +51,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <img src="img/vuesax-linear-clipboard-tick.png" alt="Tasks Icon" class="card-icon">
+                        <img src="Assets/clipboard-tick.png" alt="Tasks Icon" class="card-icon">
                         <h5 class="card-title">6 Tasks</h5>
                         <p class="card-text">Complete within one week</p>
                         <button class="btn btn-primary">Add Task</button>
@@ -67,7 +62,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <img src="img/vuesax-linear-people.png" alt="Members Icon" class="card-icon">
+                        <img src="Assets/people.png" alt="Members Icon" class="card-icon">
                         <h5 class="card-title">4 Members</h5>
                         <p class="card-text">Members within household</p>
                         <button class="btn btn-primary">Add Member</button>
@@ -78,7 +73,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <img src="img/vuesax-linear-clipboard-tick.png" alt="Timeline Icon" class="card-icon">
+                        <img src="Assets/calendar.png" alt="Timeline Icon" class="card-icon">
                         <h5 class="card-title">5 Days</h5>
                         <p class="card-text">Timeline on task</p>
                         <button class="btn btn-primary">View Calendar</button>
@@ -123,18 +118,19 @@
             <div class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Upcoming Tasks</h5>
-                        <ul class="list-group list-group-flush">
+                        <h5 class="card-title">Active Tasks</h5>
+                        
+                        <ul class="list-group list-group-flush">   
                             <li class="list-group-item">
-                                <span class="task-label">Task 1:</span>
+                                <img src="Assets/piggybank.png" alt="Rewards Icon" class="feature-icon"><span class="task-label">Task 1:</span>
                                 <span class="task-details">Description of task 1</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="task-label">Task 2:</span>
+                                <img src="Assets/piggybank.png" alt="Rewards Icon" class="feature-icon"><span class="task-label">Task 2:</span>
                                 <span class="task-details">Description of task 2</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="task-label">Task 3:</span>
+                                <img src="Assets/piggybank.png" alt="Rewards Icon" class="feature-icon"> <span class="task-label">Task 3:</span>
                                 <span class="task-details">Description of task 3</span>
                             </li>
                         </ul>
@@ -143,12 +139,14 @@
             </div>
         </div>
 
-        <!-- Task History Section -->
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Task History</h5>
+    <!-- Task History Section -->
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Task History</h5>
+                <div class="row">
+                    <div class="col-md-7">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -178,16 +176,37 @@
                             </table>
                         </div>
                     </div>
+                    <div class="col-md-5">
+                        <div class="text-center d-none d-md-block">
+                            <img
+                                class="img-fluid"
+                                src="Assets/astrotask.png"
+                                alt="Hero Banner"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <!-- Withdrawal Request Section -->
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Withdrawal Request</h5>
+
+     <!-- Withdrawal Request Section -->
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Withdrawal Request</h5>
+                <div class="row">
+                    <div class="col-md-5 text-center d-none d-md-block">
+                        <img
+                            class="img-fluid"
+                            src="Assets/astrowithdraw.png"
+                            alt="Hero Banner"
+                        />
+                    </div>
+                    <div class="col-md-7">
                         <form id="withdrawal-form">
                             <div class="mb-3">
                                 <label for="withdrawal-name" class="form-label">Name</label>
@@ -199,23 +218,10 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Send Request</button>
                         </form>
-                      </div>
                     </div>
                 </div>
             </div>
-        </main>
-    
-        <!-- Footer Section -->
-        <footer class="container text-center mt-5">
-            <span>2024 Earn & Learn App</span>
-        </footer>
-    
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="scripts/api.js"></script>
-        <script src="scripts/main.js"></script>
-    
-    </body>
-    
-    </html>
+        </div>
+    </div>
+</div>
+    </main>
