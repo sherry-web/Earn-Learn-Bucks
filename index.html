@@ -22,39 +22,33 @@
   </head>
 
   <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-xxl">
-          <a class="navbar-brand m-2 ms-5" href="./">
-            <img src="Assets/logo.png" class="img-fluid logo" />Earn & Learn</a>
-          <!-- Toggle button for mobile -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#main-nav"
-            aria-controls="main-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Navigation menu -->
-          <div
-            class="collapse navbar-collapse justify-content-end align-center"
-            id="main-nav">
-            <ul class="navbar-nav">
+<!-- HEADER -->
+<header>
+  <nav class="navbar">
+      <a class="navbar-brand" href="./">
+          <img src="Assets/logo.png" alt="Earn & Learn" style="height: 40px;">
+          <span>Earn & Learn</span>
+      </a>
+      <!-- Toggle button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navigation menu -->
+      <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav">
               <!-- Home -->
               <li class="nav-item">
-                <a class="nav-link active" href="./">Home</a>
+                  <a class="nav-link" href="./">Home</a>
               </li>
-              <!-- Dashboard (For logged-in users) -->
+              <!-- Dashboard -->
               <li class="nav-item">
-                <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                  <a class="nav-link" href="./dashboard.html">Dashboard</a>
               </li>
-             
-      </nav>
-    </header>
+              <!-- Add any additional links here -->
+          </ul>
+      </div>
+  </nav>
+</header>
 
     <!-- MAIN -->
     <main>
