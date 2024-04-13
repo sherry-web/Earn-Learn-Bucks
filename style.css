@@ -109,6 +109,8 @@ body {
   display: flex; /* Flex layout for navigation */
   align-items: center; /* Center the navigation items */
   margin: 0; /* Remove default margin */
+  margin-left: auto; /* Push the menu links to the right */
+  padding-right: 20px; /* Add 20px padding to the right side to create a gap from the end of the container */
 }
 
 .navbar-nav .nav-item {
@@ -167,7 +169,6 @@ body {
     padding: 10px 20px; /* Adjust padding for small screens */
   }
 }
-/* New styles for the <header> section */
 header {
   display: flex;
   align-items: center;

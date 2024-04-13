@@ -17,33 +17,36 @@
 </head>
 <body>
 
-   <!-- HEADER -->
+<!-- HEADER -->
 <header>
-    <div class="header__main-wrapper">
-      <nav class="navbar">
+    <nav class="navbar">
         <a class="navbar-brand" href="./">
-          <img src="Assets/logo.png" alt="Earn & Learn" style="height: 40px;">
-          <span>Earn & Learn</span>
+            <img src="Assets/logo.png" alt="Earn & Learn" style="height: 40px;">
+            <span>Earn & Learn</span>
         </a>
-
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- Navigation menu -->
         <div class="collapse navbar-collapse" id="main-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./dashboard.html">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Logout</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav ml-auto">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./">Home</a>
+                </li>
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                </li>
+                <!-- Logout -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Logout</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-    </div>
+    </nav>
   </header>
-
     <!-- Main Content Section -->
     <main class="container mt-5">
         <div class="row">
