@@ -1,202 +1,99 @@
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Base styles */
+/* Basic Settings */
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
   color: #333;
-  line-height: 1.5;
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+h2, h5 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
-.container-xxl {
-  max-width: 1200px;
-}
-
-.container-lg {
-  max-width: 992px;
-}
-
-.container-md {
-  max-width: 768px;
-}
-
-.container-sm {
-  max-width: 576px;
-}
-
-/* Grid system */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px -15px -15px -15px; /* Increase the negative margin to account for padding changes */
-}
-
-.col {
-  flex: 1;
-  padding: 15px 15px 15px 15px; /* Add padding to all sides of columns */
-}
-
-.col-md-4 {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-}
-
-.col-md-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.col-md-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  .col-md-4, .col-md-6, .col-md-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-
-/* Navbar styles */
+/* Navbar Styles */
 .navbar {
-  background-color: var(--primary-color); /* Set the primary color */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border at the bottom */
-  height: 60px; /* Standard navbar height */
-  padding:  20px; /* Horizontal padding */
-  display: flex; /* Flex layout */
-  justify-content: space-between; /* Space out the brand and menu */
-  align-items: center; /* Center items vertically */
-  width: 100%; /* Full width */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  position: sticky; /* Keep the navbar at the top on scroll */
-  top: 0; /* Position it at the top of the page */
-  z-index: 1000; /* Ensure it's on top of other elements */
-}
-
-.navbar-brand {
-  display: flex; /* Flex layout to align brand elements */
-  align-items: center; /* Align brand elements vertically */
-  color: #fff; /* White text color */
-  font-size: 20px; /* Adjust the font size */
-  font-weight: bold; /* Bold font weight */
-  text-decoration: none; /* No underline */
+  background-color: #ffffff;
+  padding: 10px 20px;
 }
 
 .navbar-brand img {
-  height: 40px; /* Standardize the logo height */
-  margin-right: 10px; /* Spacing between logo and brand name */
-}
-
-.navbar-nav {
-  display: flex; /* Flex layout for navigation */
-  align-items: center; /* Center the navigation items */
-  margin: 0; /* Remove default margin */
+  width: 40px;
+  margin-right: 10px;
 }
 
 .navbar-nav .nav-item {
-  list-style: none; /* Remove default list styles */
+  margin-left: 20px;
 }
 
-.navbar-nav .nav-link {
-  padding: 10px 15px; /* Padding around links */
-  color: #fff; /* White link color */
-  text-decoration: none; /* No underline */
-  transition: color 0.3s ease-in-out; /* Smooth transition */
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #f1f1f1; /* Lighten the color on hover */
+.nav-link.active {
+  color: #007bff;
 }
 
 .navbar-toggler {
-  display: none; /* Hide the toggler by default */
-  background: none; /* Transparent background */
-  border: none; /* No border */
-  outline: none; /* Remove focus outline */
-}
-
-.navbar-toggler-icon {
-  width: 24px; /* Standard size for the icon */
-  height: 24px; /* Standard size for the icon */
-  background-color: #fff; /* White color for the icon */
-}
-
-.collapse {
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Stack menu items vertically */
-  align-items: flex-end; /* Align items to the right */
-}
-
-@media (max-width: 768px) {
-  .navbar-toggler {
-    display: block; /* Show the toggler button on small screens */
-  }
-  
-  .collapse {
-    display: none; /* Hide the collapse menu by default */
-  }
-  
-  .collapse.expanded {
-    display: flex; /* Show the collapse menu when expanded */
-  }
-  
-  .navbar-nav {
-    flex-direction: column; /* Stack navigation items vertically */
-    align-items: flex-end; /* Align items to the right */
-  }
-  
-  .navbar-nav .nav-link {
-    padding: 10px 20px; /* Adjust padding for small screens */
-  }
-}
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: white;
   border: none;
 }
 
-.btn-primary:hover {
+/* Buttons */
+button, .btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
   background-color: #0056b3;
 }
 
-.btn-secondary {
-  background-color: #6c757d;
-  color: white;
-  border: none;
+/* Main Content */
+.container, .container-xxl {
+  padding: 20px;
 }
 
-.btn-secondary:hover {
-  background-color: #565e64;
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
 }
 
-/* Form styles */
+p.lead {
+  font-size: 18px;
+  color: #555;
+}
+
+h5.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Forms */
 .form-control {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -205,452 +102,135 @@ body {
   font-weight: bold;
 }
 
-.form-check-input {
-  margin-right: 10px;
+.contact-form h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
-/* Custom styling for index.html and dashboard.html */
+.contact-form form {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.contact-form button, #loginBtn, #registerBtn {
+  margin-top: 10px;
+}
+
+/* Progress Bars */
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+
+.progress-bar {
+  background-color: #007bff;
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.modal-header, .modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.modal-footer button {
+  background-color: #ccc;
+}
+
+/* Hero Section */
+#hero-intro {
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
 .hero-text-color {
   color: #007bff;
 }
 
-img.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-footer {
+/* Section Styles */
+.features-benefits, .success-stories, .contact, .card-body {
   background-color: #f8f9fa;
-  text-align: center;
-  padding: 10px;
-  border-top: 1px solid #dee2e6;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-
-/*Dashboard.html style*/
-
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Base styles */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  line-height: 1.5;
-  background-color: #f8f9fa;
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Grid Layout */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-}
-
-.col {
-  flex: 1;
-  padding: 15px;
-}
-
-.col-md-4 {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-}
-
-.col-md-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.col-md-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  .col-md-4, .col-md-6, .col-md-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-/* Cards */
-.card {
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-.card-header {
-  font-weight: bold;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.card-body {
-  padding: 10px;
-}
-
-
-/* Navigation styles */
-.navbar {
-  background-color: #4caf50; /* Green color */
-  height: 64px; /* Height of the navbar */
-  padding: 0 20px; /* Horizontal padding */
-  display: flex; /* Use flex layout */
-  justify-content: space-between; /* Space between left and right sides */
-  align-items: center; /* Centering items vertically */
-  width: 100%; /* Full width */
-}
-
-.navbar-brand {
-  color: white; /* White text color */
-  font-size: 24px; /* Font size for the brand */
-  font-weight: bold; /* Bold font weight */
-  text-decoration: none; /* Remove underline from text */
-}
-
-.navbar-nav {
-  display: flex; /* Use flex layout */
-  align-items: center; /* Align items to center */
-  margin-left: auto; /* Moves the links to the right */
-}
-
-.navbar-nav .nav-item {
-  padding: 10px; /* Padding for links */
-}
-
-.navbar-nav .nav-link {
-  color: white; /* White color for links */
-  text-decoration: none; /* No underline */
-  transition: color 0.3s ease-in-out; /* Smooth color transition */
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f1f1f1; /* Lighter color on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
-
-  .navbar-nav {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-end; /* Align to the right */
-    margin-top: 10px; /* Margin top for smaller screens */
-  }
-
-  .navbar-toggler {
-    display: block; /* Show toggler button */
-  }
-
-  .navbar-nav.expanded {
-    display: block; /* Display navbar links when expanded */
-  }
-}
-/* Additional styles for toggler icon */
-.navbar-toggler-icon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url('data:image/svg+xml;base64,...'); /* SVG data for toggler icon */
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  border: none;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  color: white;
-  border: none;
-}
-
-.btn-secondary:hover {
-  background-color: #565e64;
-}
-
-/* Form styles */
-.form-control {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form-label {
-  font-weight: bold;
-}
-
-.form-check-input {
-  margin-right: 10px;
-}
-
-/* Table styles */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-table th, table td {
-  padding: 10px;
-  border: 1px solid #dee2e6;
-}
-
-table th {
-  background-color: #f8f9fa;
-  font-weight: bold;
-}
-
-/* Icons */
-.icon {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/* Footer */
-footer {
-  background-color: #343a40;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
-/* Base styles */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  line-height: 1.5;
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Grid system */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-}
-
-.col {
-  flex: 1;
-  padding: 15px;
-}
-
-.col-md-4 {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-}
-
-.col-md-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.col-md-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  .col-md-4, .col-md-6, .col-md-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-/* Navbar styles */
-.navbar {
-  background-color: #4caf50; /* Green color */
-  height: 64px; /* Height of the navbar */
-  padding: 0 20px; /* Horizontal padding */
-  display: flex; /* Use flex layout */
-  justify-content: space-between; /* Space between left and right sides */
-  align-items: center; /* Centering items vertically */
-  width: 100%; /* Full width */
-}
-
-.navbar-brand {
-  color: white; /* White text color */
-  font-size: 24px; /* Font size for the brand */
-  font-weight: bold; /* Bold font weight */
-  text-decoration: none; /* Remove underline from text */
-}
-
-.navbar-nav {
-  display: flex; /* Use flex layout */
-  align-items: center; /* Align items to center */
-  margin-left: auto; /* Moves the links to the right */
-}
-
-.navbar-nav .nav-item {
-  padding: 10px; /* Padding for links */
-}
-
-.navbar-nav .nav-link {
-  color: white; /* White color for links */
-  text-decoration: none; /* No underline */
-  transition: color 0.3s ease-in-out; /* Smooth color transition */
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f1f1f1; /* Lighter color on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
-
-  .navbar-nav {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-end; /* Align to the right */
-    margin-top: 10px; /* Margin top for smaller screens */
-  }
-
-  .navbar-toggler {
-    display: block; /* Show toggler button */
-  }
-
-  .navbar-nav.expanded {
-    display: block; /* Display navbar links when expanded */
-  }
-}
-
-
-/* Row container */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px; /* Offset the padding to evenly distribute the space */
-  row-gap: 30px; /* Adds a row gap of 30px between each container */
-}
-
-
-/* Column styles */
-.col {
-  flex: 1;
-  
-}
-
-.col-md-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-/* Card styles */
-.card {
-  height: 100%; /* Ensure the card fills the height of the column */
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Ensure no overflow */
-}
-
-/* Card body styles */
-.card-body {
-  padding: 20px; /* Ensure consistent padding within the card */
-}
-
-/* Progress container styles */
-.progress-container {
-  margin-top: 20px; /* Add space at the top */
-}
-
-.progress-item {
-  display: flex;
-  justify-content: space-between; /* Align elements evenly */
-  margin-bottom: 10px; /* Space out each item */
-}
-
-.progress-label,
-.progress-value {
-  font-size: 14px; /* Set consistent font size */
-  color: #555; /* Set text color */
-}
-
-/* Progress bar styles */
-.progress {
-  flex: 1; /* Allow the progress bar to fill remaining space */
-  height: 10px; /* Standard height for progress bar */
-  background-color: #e0e0e0; /* Light gray background */
-  border-radius: 5px; /* Rounded corners */
-  overflow: hidden;
-  margin: 0 10px; /* Add margin on each side of the progress bar */
-}
-
-.progress-bar {
-  height: 100%; /* Ensure it fills the entire height */
-  background-color: #007bff; /* Set primary color for the progress bar */
-}
-
-/* List group styles */
-.list-group {
-  margin-top: 20px; /* Add space at the top */
+/* Feature and Benefit Lists */
+.feature-list, .benefit-list {
+  list-style: none;
   padding: 0;
 }
 
-.list-group-item {
+.feature-list li, .benefit-list li {
   display: flex;
   align-items: center;
-  padding: 10px 0; /* Adjust padding */
-  border: none; /* Remove border */
-  border-bottom: 1px solid #dee2e6; /* Light border between items */
+  margin-bottom: 10px;
 }
 
-.feature-icon {
-  margin-right: 10px; /* Space between icon and task label */
-  width: 20px; /* Standard size for icon */
-  height: 20px; /* Standard size for icon */
+.feature-icon, .benefit-icon, .card-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
-.task-label {
+/* Tables */
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
   font-weight: bold;
 }
 
-.task-details {
-  color: #555; /* Set consistent color */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container, .container-xxl, .card-body {
+      padding: 10px;
+  }
+  .modal-dialog {
+      width: 90%;
+  }
+  .modal-header, .modal-footer {
+      flex-direction: column;
+  }
 }
