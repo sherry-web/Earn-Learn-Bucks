@@ -1,99 +1,152 @@
-/* Basic Settings */
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Base styles */
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
   color: #333;
+  line-height: 1.5;
 }
 
-h2, h5 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* Navbar Styles */
+.container-xxl {
+  max-width: 1200px;
+}
+
+.container-lg {
+  max-width: 992px;
+}
+
+.container-md {
+  max-width: 768px;
+}
+
+.container-sm {
+  max-width: 576px;
+}
+
+/* Grid system */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.col {
+  flex: 1;
+  padding: 15px;
+}
+
+.col-md-4 {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-md-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .col-md-4, .col-md-6, .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Navbar */
 .navbar {
-  background-color: #ffffff;
-  padding: 10px 20px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
 }
 
-.navbar-brand img {
-  width: 40px;
-  margin-right: 10px;
-}
-
-.navbar-nav .nav-item {
-  margin-left: 20px;
-}
-
-.nav-link {
+.navbar .navbar-brand {
+  font-size: 1.5rem;
   color: #333;
-  text-decoration: none;
-  font-weight: bold;
 }
 
-.nav-link.active {
-  color: #007bff;
+.navbar .navbar-toggler {
+  display: none;
 }
 
-.navbar-toggler {
-  border: none;
+.navbar .navbar-nav {
+  margin-left: auto;
+}
+
+.navbar .nav-item {
+  list-style: none;
+}
+
+.navbar .nav-link {
+  color: #333;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-toggler {
+    display: block;
+  }
+
+  .navbar .navbar-nav {
+    display: none;
+  }
+
+  .navbar.expanded .navbar-nav {
+    display: block;
+  }
 }
 
 /* Buttons */
-button, .btn {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+.btn {
+  display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-button:hover, .btn:hover {
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
   background-color: #0056b3;
 }
 
-/* Main Content */
-.container, .container-xxl {
-  padding: 20px;
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
 }
 
-.section-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #007bff;
-  margin-bottom: 15px;
+.btn-secondary:hover {
+  background-color: #565e64;
 }
 
-p.lead {
-  font-size: 18px;
-  color: #555;
-}
-
-h5.card-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-}
-
-.card {
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-  padding: 20px;
-}
-
-/* Forms */
+/* Form styles */
 .form-control {
   width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -102,135 +155,23 @@ h5.card-title {
   font-weight: bold;
 }
 
-.contact-form h4 {
-  font-size: 22px;
-  margin-bottom: 15px;
+.form-check-input {
+  margin-right: 10px;
 }
 
-.contact-form form {
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-.contact-form button, #loginBtn, #registerBtn {
-  margin-top: 10px;
-}
-
-/* Progress Bars */
-.progress {
-  height: 10px;
-  border-radius: 5px;
-  background-color: #e0e0e0;
-}
-
-.progress-bar {
-  background-color: #007bff;
-}
-
-/* Modals */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  border-radius: 10px;
-}
-
-.modal-header, .modal-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.modal-header h2 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.modal-footer button {
-  background-color: #ccc;
-}
-
-/* Hero Section */
-#hero-intro {
-  padding: 40px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-}
-
+/* Custom styling for index.html and dashboard.html */
 .hero-text-color {
   color: #007bff;
 }
 
-/* Section Styles */
-.features-benefits, .success-stories, .contact, .card-body {
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
   background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Feature and Benefit Lists */
-.feature-list, .benefit-list {
-  list-style: none;
-  padding: 0;
-}
-
-.feature-list li, .benefit-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.feature-icon, .benefit-icon, .card-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-/* Tables */
-table {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-thead {
-  background-color: #f4f4f4;
-}
-
-th, td {
+  text-align: center;
   padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  font-weight: bold;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .container, .container-xxl, .card-body {
-      padding: 10px;
-  }
-  .modal-dialog {
-      width: 90%;
-  }
-  .modal-header, .modal-footer {
-      flex-direction: column;
-  }
+  border-top: 1px solid #dee2e6;
 }
