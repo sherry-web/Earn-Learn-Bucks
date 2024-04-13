@@ -15,234 +15,226 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <title>Dashboard</title>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-    <nav class="navbar">
-        <a class="navbar-brand" href="./">
-            <img src="Assets/logo.png" alt="Earn & Learn" style="height: 40px;">
-            <span>Earn & Learn</span>
-        </a>
-        <!-- Toggle button for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Navigation menu -->
-        <div class="collapse navbar-collapse" id="main-nav">
-            <ul class="navbar-nav ml-auto">
-                <!-- Home -->
-                <li class="nav-item">
-                    <a class="nav-link" href="./">Home</a>
-                </li>
-                <!-- Dashboard -->
-                <li class="nav-item">
-                    <a class="nav-link" href="./dashboard.html">Dashboard</a>
-                </li>
-                <!-- Logout -->
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">Logout</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-  </header>
-    <!-- Main Content Section -->
-    <main class="container mt-5">
-        <div class="row">
-            <!-- Task Summary Cards -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img src="Assets/clipboard-tick.png" alt="Tasks Icon" class="card-icon">
-                        <h5 class="card-title">6 Tasks</h5>
-                        <p class="card-text">Complete within one week</p>
-                        <button class="btn btn-primary">Add Task</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img src="Assets/people.png" alt="Members Icon" class="card-icon">
-                        <h5 class="card-title">4 Members</h5>
-                        <p class="card-text">Members within household</p>
-                        <button class="btn btn-primary">Add Member</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img src="Assets/calendar.png" alt="Timeline Icon" class="card-icon">
-                        <h5 class="card-title">5 Days</h5>
-                        <p class="card-text">Timeline on task</p>
-                        <button class="btn btn-primary">View Calendar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Progress bars -->
-<div class="row mt-4">
-    <!-- Completed Tasks Section -->
-    <div class="col-md-6">
-        <div class="card h-100"> <!-- Adds h-100 class to match height -->
-            <div class="card-body">
-                <h5 class="card-title">Completed Tasks</h5>
-                <div class="progress-container">
-                    <div class="progress-item">
-                        <span class="progress-label">Jan</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 75%;"></div>
-                        </div>
-                        <span class="progress-value">75%</span>
-                    </div>
-                    <div class="progress-item">
-                        <span class="progress-label">Feb</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 45%;"></div>
-                        </div>
-                        <span class="progress-value">45%</span>
-                    </div>
-                    <div class="progress-item">
-                        <span class="progress-label">Mar</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 55%;"></div>
-                        </div>
-                        <span class="progress-value">55%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Active Tasks Section -->
-    <div class="col-md-6">
-        <div class="card h-100"> <!-- Adds h-100 class to match height -->
-            <div class="card-body">
-                <h5 class="card-title">Active Tasks</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <img src="Assets/piggybank.png" alt="Rewards Icon" class="feature-icon">
-                        <span class="task-label">Task 1:</span>
-                        <span class="task-details">Description of task 1</span>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="./">
+                <img src="Assets/logo.png" alt="Earn & Learn" style="height: 40px;">
+                <span>Earn & Learn</span>
+            </a>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Home</a>
                     </li>
-                    <li class="list-group-item">
-                        <img src="Assets/piggybank.png" alt="Rewards Icon" class="feature-icon">
-                        <span class="task-label">Task 2:</span>
-                        <span class="task-details">Description of task 2</span>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./dashboard.html">Dashboard</a>
                     </li>
-                    <li class="list-group-item">
-                        <img src="Assets/piggybank.png" alt="Rewards Icon" class="feature-icon">
-                        <span class="task-label">Task 3:</span>
-                        <span class="task-details">Description of task 3</span>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Logout</a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
-</div>
-    <!-- Task History Section -->
-<div class="row mt-4">
-    <div class="col-md-12">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Task History</h5>
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Task Name</th>
-                                        <th>Completed By</th>
-                                        <th>Amount Earned</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Clean room</td>
-                                        <td>Family Member 1</td>
-                                        <td>R15.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wash dishes</td>
-                                        <td>Family Member 2</td>
-                                        <td>R20.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Take out trash</td>
-                                        <td>Family Member 3</td>
-                                        <td>R10.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mt-5">
+        <!-- Existing content -->
+
+        <!-- Progress bars -->
+        <div class="row mt-4">
+            <!-- Move "Active Tasks" section before "Completed Tasks" -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Active Tasks</h5>
+                        <ul class="list-group list-group-flush" id="active-tasks-list">
+                            <!-- Placeholder for active tasks -->
+                        </ul>
+                        <!-- Input and button to add new tasks -->
+                        <input type="text" id="task-input" class="form-control mb-3" placeholder="Add a new task">
+                        <button class="btn btn-primary" id="add-task-btn">Add Task</button>
                     </div>
-                    <div class="col-md-5">
-                        <div class="text-center d-none d-md-block">
-                            <img
-                                class="img-fluid"
-                                src="Assets/astrotask.png"
-                                alt="Hero Banner"
-                            />
+                </div>
+            </div>
+    
+            <!-- "Completed Tasks" section remains in the same column, but now it is after "Active Tasks" -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Completed Tasks</h5>
+                        <div class="progress-container">
+                            <div class="progress-item">
+                                <span class="progress-label">Jan</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%;"></div>
+                                </div>
+                                <span class="progress-value">75%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Feb</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 45%;"></div>
+                                </div>
+                                <span class="progress-value">45%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Mar</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%;"></div>
+                                </div>
+                                <span class="progress-value">55%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-
-     <!-- Withdrawal Request Section -->
-<div class="row mt-4">
-    <div class="col-md-12">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Withdrawal Request</h5>
-                <div class="row">
-                    <div class="col-md-5 text-center d-none d-md-block">
-                        <img
-                            class="img-fluid"
-                            src="Assets/astrowithdraw.png"
-                            alt="Hero Banner"
-                        />
-                    </div>
-                    <div class="col-md-7">
-                        <form id="withdrawal-form">
-                            <div class="mb-3">
-                                <label for="withdrawal-name" class="form-label">Name</label>
-                                <input type="text" id="withdrawal-name" name="withdrawal-name" class="form-control" placeholder="Enter your name" required />
+ 
+        <!-- Task History Section -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Task History</h5>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Task Name</th>
+                                                <th>Completed By</th>
+                                                <th>Amount Earned</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Clean room</td>
+                                                <td>Family Member 1</td>
+                                                <td>R15.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wash dishes</td>
+                                                <td>Family Member 2</td>
+                                                <td>R20.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Take out trash</td>
+                                                <td>Family Member 3</td>
+                                                <td>R10.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="withdrawal-amount" class="form-label">Amount</label>
-                                <input type="number" id="withdrawal-amount" name="withdrawal-amount" class="form-control" placeholder="Enter amount" required />
+                            <div class="col-md-5">
+                                <div class="text-center d-none d-md-block">
+                                    <img class="img-fluid" src="Assets/astrotask.png" alt="Hero Banner" />
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send Request</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
+        <!-- Withdrawal Request Section -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Withdrawal Request</h5>
+                        <div class="row">
+                            <div class="col-md-5 text-center d-none d-md-block">
+                                <img class="img-fluid" src="Assets/astrowithdraw.png" alt="Hero Banner" />
+                            </div>
+                            <div class="col-md-7">
+                                <form id="withdrawal-form">
+                                    <div class="mb-3">
+                                        <label for="withdrawal-name" class="form-label">Name</label>
+                                        <input type="text" id="withdrawal-name" name="withdrawal-name" class="form-control" placeholder="Enter your name" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="withdrawal-amount" class="form-label">Amount</label>
+                                        <input type="number" id="withdrawal-amount" name="withdrawal-amount" class="form-control" placeholder="Enter amount" required />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send Request</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-     <!-- FOOTER -->
-     <footer>
+    <!-- FOOTER -->
+    <footer>
         <span>2024 Earn & Learn App</span>
-      </footer>
-  
-      <!--Font Awesome Icons-->
-      <script
-        src="https://kit.fontawesome.com/16f53945bb.js"
-        crossorigin="anonymous"></script>
-  
-      <!-- Scripts -->
-  
-    </body>
-  </html>
+    </footer>
+
+   
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+    <script>
+        // Function to add task to the active tasks list
+        function addTask() {
+            const taskInput = document.querySelector('#task-input');
+            const taskList = document.querySelector('#active-tasks-list');
+
+            if (taskInput.value.trim()) {
+                // Create a list item for the new task
+                const listItem = document.createElement('li');
+                listItem.classList.add('list-group-item');
+                listItem.textContent = taskInput.value;
+
+                // Add delete button to the task
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm', 'ml-2');
+                deleteBtn.onclick = () => {
+                    taskList.removeChild(listItem);
+                };
+
+                listItem.appendChild(deleteBtn);
+                taskList.appendChild(listItem);
+
+                // Clear input field
+                taskInput.value = '';
+
+                // Update container heights to match
+                updateContainerHeights();
+            }
+        }
+
+        // Function to update container heights
+        function updateContainerHeights() {
+            const completedTasksContainer = document.querySelector('.col-md-6:nth-child(1)');
+            const activeTasksContainer = document.querySelector('.col-md-6:nth-child(2)');
+
+            const maxHeight = Math.max(
+                completedTasksContainer.querySelector('.card-body').scrollHeight,
+                activeTasksContainer.querySelector('.card-body').scrollHeight
+            );
+
+            completedTasksContainer.querySelector('.card').style.height = maxHeight + 'px';
+            activeTasksContainer.querySelector('.card').style.height = maxHeight + 'px';
+        }
+
+        // Event listener for the Add Task button
+        document.querySelector('#add-task-btn').addEventListener('click', addTask);
+
+        // Call the updateContainerHeights function when the page loads
+        window.addEventListener('load', updateContainerHeights);
+    </script>
+
+</body>
+
+</html>
