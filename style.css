@@ -9,6 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #333;
   line-height: 1.5;
+  background-color: #f8f9fa;
 }
 
 /* Container */
@@ -18,23 +19,7 @@ body {
   padding: 0 15px;
 }
 
-.container-xxl {
-  max-width: 1200px;
-}
-
-.container-lg {
-  max-width: 992px;
-}
-
-.container-md {
-  max-width: 768px;
-}
-
-.container-sm {
-  max-width: 576px;
-}
-
-/* Grid system */
+/* Grid Layout */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -68,16 +53,35 @@ body {
   }
 }
 
+/* Cards */
+.card {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.card-body {
+  padding: 10px;
+}
+
 /* Navbar */
 .navbar {
-  background-color: #f8f9fa;
+  background-color: #343a40;
   padding: 10px;
-  border-bottom: 1px solid #dee2e6;
 }
 
 .navbar .navbar-brand {
   font-size: 1.5rem;
-  color: #333;
+  color: white;
 }
 
 .navbar .navbar-toggler {
@@ -93,7 +97,7 @@ body {
 }
 
 .navbar .nav-link {
-  color: #333;
+  color: white;
   padding: 10px;
 }
 
@@ -159,19 +163,33 @@ body {
   margin-right: 10px;
 }
 
-/* Custom styling for index.html and dashboard.html */
-.hero-text-color {
-  color: #007bff;
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-img.img-fluid {
-  max-width: 100%;
-  height: auto;
+table th, table td {
+  padding: 10px;
+  border: 1px solid #dee2e6;
 }
 
-footer {
+table th {
   background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* Icons */
+.icon {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
   text-align: center;
   padding: 10px;
-  border-top: 1px solid #dee2e6;
 }
