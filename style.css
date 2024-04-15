@@ -11,6 +11,41 @@ body {
     overflow-x: hidden;
 }
 
+/* Adjust the styling of the paragraph text */
+#hero-intro p {
+    font-weight: normal; /* Set the paragraph font weight to regular */
+    margin-bottom: 20px; /* Add space between the paragraph and button */
+}
+
+/* Align image and text side by side */
+#hero-intro .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Create space between the text and image columns */
+    align-items: center; /* Vertically align the content */
+    padding: 3%; /* Padding around the content */
+}
+
+/* Text column styling */
+#hero-intro .col-md-6.text-center.text-md-start {
+    flex: 1; /* Let the text column take up one portion of the row */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align elements to the left */
+    margin-right: 60px; /* Space between text and image columns */
+}
+
+/* Ensure the button is under the paragraph */
+#hero-intro button {
+    margin-top: 20px; /* Add space between the button and the paragraph */
+}
+
+/* Image column styling */
+#hero-intro .col-md-6.d-none.d-md-block {
+    flex: 1; /* Let the image column take up one portion of the row */
+    text-align: center; /* Center-align the image */
+}
+
 .container {
     width: 100%; /* Ensure the container spans the full width */
     max-width: 1200px; /* Set max width for larger screens */
@@ -139,6 +174,42 @@ body {
     }
 }
 
+/* Equal height for Active and Completed Tasks sections */
+.row .equal-height {
+  height: 300px; /* Adjust the fixed height as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Task History Section CSS updates */
+.row.mt-4 {
+  justify-content: center; /* Center-align the content within the row */
+}
+
+/* Centering the content in the table and image */
+.table-responsive, 
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Adjusting margin for image */
+.col-md-5 {
+  margin-left: 210px; /* Adds 50px margin to the left of the image */
+}
+
+.col-md-7,
+.col-md-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add padding from the sides of the container */
+.card-body {
+  padding: 20px; /* Adjust the padding to 20px */
+}
 /* Main content */
 main.container {
     margin-top: 20px;
@@ -257,4 +328,103 @@ input:focus {
 .btn:focus,
 .btn:hover {
     opacity: 0.9;
+}
+
+
+/* Modal container styling */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Modal header styling */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Modal title styling */
+.modal-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Close button styling */
+.modal-header .close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Modal body styling */
+.modal-body {
+  padding-top: 10px;
+}
+
+/* Form and form elements styling */
+.modal-body form,
+.modal-body iframe {
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+.modal-body form .form-label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Input and button styling */
+.modal-body form input,
+.modal-body form button {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+/* Button styling */
+.modal-body form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.modal-body form button:hover {
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Modal footer styling */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.contact-form {
+    margin-bottom: 20px;
+}
+/* Modal footer button styling */
+.modal-footer button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.modal-footer button:hover {
+  box-shadow: 0 2px 10px rgba(108, 117, 125, 0.3);
 }

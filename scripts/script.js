@@ -1,54 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Function to add a task to the active tasks table
-  function addTaskToActiveTable(taskName, assignedTo, amountEarned) {
-    const activeTasksTable = document.querySelector('#active-tasks-table');
-    
-    // Create a new row for the task
-    const newRow = document.createElement('tr');
-    
-    // Create cells for task name, assigned to, and amount earned
-    newRow.innerHTML = `
-      <td>${taskName}</td>
-      <td>${assignedTo}</td>
-      <td>R${amountEarned.toFixed(2)}</td>
-      <td>
-        <button class="btn btn-success btn-sm mr-2" onclick="markTaskAsComplete(this)">Complete</button>
-        <button class="btn btn-danger btn-sm" onclick="deleteTask(this)">Delete</button>
-        <button class="btn btn-secondary btn-sm" onclick="moveTaskToNextWeek(this)">Move to Next Week</button>
-      </td>`;
-    
-    // Append the new row to the active tasks table
-    activeTasksTable.appendChild(newRow);
-  }
+  // Get buttons by their IDs
+  const addTaskButton = document.getElementById('addTaskButton');
+  const addMemberButton = document.getElementById('addMemberButton');
+  const viewCalendarButton = document.getElementById('viewCalendarButton');
 
-  // Handle form submission and add a new task to the active tasks table
-  const addTaskForm = document.querySelector('#addTaskForm');
-  if (addTaskForm) {
-    addTaskForm.addEventListener('submit', function (event) {
-      event.preventDefault();
+  // Initialize modals using Bootstrap
+  const addTaskModal = new bootstrap.Modal(document.getElementById('addTaskModal'));
+  const addMemberModal = new bootstrap.Modal(document.getElementById('addMemberModal'));
+  const viewCalendarModal = new bootstrap.Modal(document.getElementById('viewCalendarModal'));
 
-      // Get task data from form inputs
-      const taskName = document.querySelector('#taskNameInput').value;
-      const assignedTo = document.querySelector('#assignedToInput').value;
-      const amountEarned = parseFloat(document.querySelector('#amountEarnedInput').value);
+  // Event listener for Add Task button
+  addTaskButton.addEventListener('click', function () {
+      addTaskModal.show();
+  });
+
+  // Event listener for Add Member button
+  addMemberButton.addEventListener('click', function () {
+      addMemberModal.show();
+  });
+
+  // Event listener for View Calendar button
+  viewCalendarButton.addEventListener('click', function () {
+      viewCalendarModal.show();
+  });
+
+  // Handling form submissions
+  const addTaskForm = document.getElementById('add-task-form');
+  const addMemberForm = document.getElementById('add-member-form');
+
+  // Handle Add Task form submission
+  addTaskForm.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form from submitting the usual way
+      // Retrieve form data
+      const taskName = document.getElementById('task-name').value;
+      const taskAssignee = document.getElementById('task-assignee').value;
+      const taskAmount = document.getElementById('task-amount').value;
       
-      // Add the task to the active tasks table
-      addTaskToActiveTable(taskName, assignedTo, amountEarned);
-      
-      // Reset the form and close the modal
-      addTaskForm.reset();
-      $('#addTaskModal').modal('hide');
-    });
-  }
-  
-  // Add Member modal handling
-  const addMemberButton = document.querySelector('#addMemberButton');
-  const addMemberModal = document.querySelector('#addMemberModal');
-  if (addMemberButton && addMemberModal) {
-    addMemberButton.addEventListener('click', function () {
-      $(addMemberModal).modal('show');
-    });
-  }
+      // TODO: Add task to the list and refresh the tasks table
+      // Perform any necessary actions such as updating the active tasks table
+      addTaskModal.hide(); // Close the modal
+  });
 
-  // You can add similar event handling for other elements, e.g., `viewCalendarButton` and `calendarModal`, and any other event listeners you need.
+  // Handle Add Member form submission
+  addMemberForm.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form from submitting the usual way
+      // Retrieve form data
+      const memberName = document.getElementById('member-name').value;
+      // TODO: Add member to the list and refresh the members list
+      // Perform any necessary actions such as updating the members list
+      addMemberModal.hide(); // Close the modal
+  });
 });

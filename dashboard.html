@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Dashboard</title>
 </head>
 
@@ -42,8 +43,7 @@
     </header>
 
     <!-- Main Content Section -->
-      <!-- Main Content Section -->
-      <main class="container mt-5">
+    <main class="container mt-5">
         <div class="row">
             <!-- Task Summary Cards -->
             <div class="col-md-4 mb-4">
@@ -52,7 +52,7 @@
                         <img src="Assets/clipboard-tick.png" alt="Tasks Icon" class="card-icon">
                         <h5 class="card-title">6 Tasks</h5>
                         <p class="card-text">Complete within one week</p>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#addTaskModal">Add Task</button>
+                        <button id="addTaskButton" class="btn btn-primary">Add Task</button>
                     </div>
                 </div>
             </div>
@@ -63,8 +63,7 @@
                         <img src="Assets/people.png" alt="Members Icon" class="card-icon">
                         <h5 class="card-title">4 Members</h5>
                         <p class="card-text">Members within household</p>
-                       <!-- Add Member Button -->
-                        <button class="btn btn-primary" id="addMemberButton">Add Member</button>
+                        <button id="addMemberButton" class="btn btn-primary">Add Member</button>
                     </div>
                 </div>
             </div>
@@ -75,97 +74,66 @@
                         <img src="Assets/calendar.png" alt="Timeline Icon" class="card-icon">
                         <h5 class="card-title">5 Days</h5>
                         <p class="card-text">Timeline on task</p>
-                        <button class="btn btn-primary">View Calendar</button>
+                        <button id="viewCalendarButton" class="btn btn-primary">View Calendar</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Existing content -->
 
-       <!-- Active and Completed Tasks Sections -->
-<div class="row">
-    <!-- Active Tasks Section -->
-    <div class="col-md-6">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Active Tasks</h5>
-                <!-- Active Tasks Table -->
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Task Name</th>
-                                <th>Assigned To</th>
-                                <th>Amount Earned</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody id="active-tasks-table">
-                            <!-- Placeholder rows for active tasks -->
-                            <tr>
-                                <td>Example Task 1</td>
-                                <td>Member 1</td>
-                                <td>R10.00</td>
-                                <td><button class="btn btn-secondary">Edit</button></td>
-                            </tr>
-                            <tr>
-                                <td>Example Task 2</td>
-                                <td>Member 2</td>
-                                <td>R15.00</td>
-                                <td><button class="btn btn-secondary">Edit</button></td>
-                            </tr>
-                            <tr>
-                                <td>Example Task 3</td>
-                                <td>Member 3</td>
-                                <td>R20.00</td>
-                                <td><button class="btn btn-secondary">Edit</button></td>
-                            </tr>
-                            <tr>
-                                <td>Example Task 4</td>
-                                <td>Member 4</td>
-                                <td>R25.00</td>
-                                <td><button class="btn btn-secondary">Edit</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <!-- Active and Completed Tasks Sections -->
+        <div class="row">
+            <!-- Active Tasks Section -->
+            <div class="col-md-6">
+                <div class="card h-100 equal-height">
+                    <div class="card-body">
+                        <h5 class="card-title">Active Tasks</h5>
+                        <!-- Active Tasks Table -->
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Task Name</th>
+                                        <th>Assigned To</th>
+                                        <th>Amount Earned</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="active-tasks-table">
+                                    <!-- Placeholder rows for active tasks -->
+                                    <tr>
+                                        <td>Example Task 1</td>
+                                        <td>Member 1</td>
+                                        <td>R10.00</td>
+                                        <td><button class="btn btn-secondary">Edit</button></td>
+                                    </tr>
+                                    <!-- Add more tasks as needed -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Completed Tasks Section -->
-    <div class="col-md-6">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Completed Tasks</h5>
-                <div class="progress-container">
-                    <div class="progress-item">
-                        <span class="progress-label">Jan</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 75%;"></div>
+            <!-- Completed Tasks Section -->
+            <div class="col-md-6">
+                <div class="card h-100 equal-height">
+                    <div class="card-body">
+                        <h5 class="card-title">Completed Tasks</h5>
+                        <div class="progress-container">
+                            <div class="progress-item">
+                                <span class="progress-label">Jan</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%;"></div>
+                                </div>
+                                <span class="progress-value">75%</span>
+                            </div>
+                            <!-- Add more progress items as needed -->
                         </div>
-                        <span class="progress-value">75%</span>
-                    </div>
-                    <div class="progress-item">
-                        <span class="progress-label">Feb</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 45%;"></div>
-                        </div>
-                        <span class="progress-value">45%</span>
-                    </div>
-                    <div class="progress-item">
-                        <span class="progress-label">Mar</span>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 55%;"></div>
-                        </div>
-                        <span class="progress-value">55%</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
- 
+
         <!-- Task History Section -->
         <div class="row mt-4">
             <div class="col-md-12">
@@ -245,76 +213,141 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <span>2024 Earn & Learn App</span>
-    </footer>
-        <!-- Add Member Modal -->
-        <div class="modal fade" id="addMemberModal" tabindex="-1" aria-labelledby="addMemberModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addMemberModalLabel">Add Member</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Embed the addmember.html page using an iframe -->
-                        <iframe src="modals/addmember.html" style="width: 100%; height: 400px; border: none;"></iframe>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!-- Add Member Modal -->
-<div class="modal fade" id="addMemberModal" tabindex="-1" aria-labelledby="addMemberModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <!-- Modals -->
+    <!-- Add Task Modal -->
+    <div id="addTaskModal" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addMemberModalLabel">Add Member</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h5 class="modal-title">Add Task</h5>
+                <button type="button" class="close-modal">&times;</button>
             </div>
             <div class="modal-body">
-                <!-- Embed the addmember.html page using an iframe -->
-                <iframe src="modals/addmember.html" style="width: 100%; height: 400px; border: none;"></iframe>
+                <!-- Add Task form -->
+                <form id="add-task-form">
+                    <div class="mb-3">
+                        <label for="task-name" class="form-label">Task Name</label>
+                        <input type="text" id="task-name" name="task-name" class="form-control" placeholder="Enter task name" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="task-assignee" class="form-label">Assigned To</label>
+                        <input type="text" id="task-assignee" name="task-assignee" class="form-control" placeholder="Enter assignee name" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="task-amount" class="form-label">Amount Earned</label>
+                        <input type="number" id="task-amount" name="task-amount" class="form-control" placeholder="Enter amount earned" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary close-modal">Close</button>
             </div>
         </div>
     </div>
-</div>
-   <!-- View Calendar Modal -->
-   <div class="modal fade" id="viewCalendarModal" tabindex="-1" aria-labelledby="viewCalendarModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="viewCalendarModalLabel">View Calendar</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Embed the calendar.html page using an iframe -->
-                <iframe src="modals/calendar.html" style="width: 100%; height: 400px; border: none;"></iframe>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-   
-    <!-- Scripts -->
-    <script src="scripts\script.js"></script>
-    
-   
 
+    <!-- Add Member Modal -->
+    <div id="addMemberModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Member</h5>
+                <button type="button" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Add Member form -->
+                <form id="add-member-form">
+                    <div class="mb-3">
+                        <label for="member-name" class="form-label">Name</label>
+                        <input type="text" id="member-name" name="member-name" class="form-control" placeholder="Enter member name" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Member</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Calendar Modal -->
+    <div id="viewCalendarModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Calendar</h5>
+                <button type="button" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Here is the calendar view...</p>
+                <!-- Add calendar content here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get buttons and modals by their IDs
+            const addTaskButton = document.getElementById('addTaskButton');
+            const addMemberButton = document.getElementById('addMemberButton');
+            const viewCalendarButton = document.getElementById('viewCalendarButton');
+
+            const addTaskModal = document.getElementById('addTaskModal');
+            const addMemberModal = document.getElementById('addMemberModal');
+            const viewCalendarModal = document.getElementById('viewCalendarModal');
+
+            // Event listener for Add Task button
+            addTaskButton.addEventListener('click', function () {
+                addTaskModal.style.display = 'block'; // Show modal
+            });
+
+            // Event listener for Add Member button
+            addMemberButton.addEventListener('click', function () {
+                addMemberModal.style.display = 'block'; // Show modal
+            });
+
+            // Event listener for View Calendar button
+            viewCalendarButton.addEventListener('click', function () {
+                viewCalendarModal.style.display = 'block'; // Show modal
+            });
+
+            // Add close button event handlers to modals
+            const closeButtons = document.querySelectorAll('.close-modal');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const modalToClose = button.closest('.modal');
+                    modalToClose.style.display = 'none'; // Hide modal
+                });
+            });
+
+            // Event listener for Add Task form submission
+            const addTaskForm = document.getElementById('add-task-form');
+            addTaskForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form from submitting the usual way
+                // Retrieve form data
+                const taskName = document.getElementById('task-name').value;
+                const taskAssignee = document.getElementById('task-assignee').value;
+                const taskAmount = document.getElementById('task-amount').value;
+                // TODO: Add task to the list and refresh the tasks table
+                // Perform any necessary actions such as updating the active tasks table
+
+                addTaskModal.style.display = 'none'; // Hide modal
+            });
+
+            // Event listener for Add Member form submission
+            const addMemberForm = document.getElementById('add-member-form');
+            addMemberForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form from submitting the usual way
+                // Retrieve form data
+                const memberName = document.getElementById('member-name').value;
+                // TODO: Add member to the list and refresh the members list
+                // Perform any necessary actions such as updating the members list
+                
+                addMemberModal.style.display = 'none'; // Hide modal
+            });
+        });
+    </script>
 </body>
 
 </html>
