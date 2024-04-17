@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Member</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <!-- Add Member Modal -->
+    <div id="addMemberModal" class="modal" style="display: block;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Member</h5>
+                <button type="button" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Add Member form -->
+                <form id="add-member-form">
+                    <div class="mb-3">
+                        <label for="member-name" class="form-label">Name</label>
+                        <input type="text" id="member-name" name="member-name" class="form-control" placeholder="Enter member name" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Member</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Close modal when modal is clicked -->
+    <script>
+        document.querySelectorAll('.close-modal').forEach(button => {
+            button.addEventListener('click', () => {
+                document.getElementById('addMemberModal').style.display = 'none';
+            });
+        });
+
+        // Add event listener to form submission
+        document.getElementById('add-member-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle form submission (e.g., AJAX request to submit data)
+            // Once the form is submitted, close the modal
+            document.getElementById('addMemberModal').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

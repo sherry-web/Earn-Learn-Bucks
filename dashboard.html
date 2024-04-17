@@ -9,12 +9,16 @@
     <link rel="icon" type="image/x-icon" href="Assets/logo.png">
 
     <!-- Google Fonts -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Assets/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
 
     <title>Dashboard</title>
+    
 </head>
 
 <body>
@@ -212,142 +216,51 @@
         </div>
 
     </main>
-
-    <!-- Modals -->
-    <!-- Add Task Modal -->
-    <div id="addTaskModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Add Task</h5>
-                <button type="button" class="close-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <!-- Add Task form -->
-                <form id="add-task-form">
-                    <div class="mb-3">
-                        <label for="task-name" class="form-label">Task Name</label>
-                        <input type="text" id="task-name" name="task-name" class="form-control" placeholder="Enter task name" required />
-                    </div>
-                    <div class="mb-3">
-                        <label for="task-assignee" class="form-label">Assigned To</label>
-                        <input type="text" id="task-assignee" name="task-assignee" class="form-control" placeholder="Enter assignee name" required />
-                    </div>
-                    <div class="mb-3">
-                        <label for="task-amount" class="form-label">Amount Earned</label>
-                        <input type="number" id="task-amount" name="task-amount" class="form-control" placeholder="Enter amount earned" required />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Add Task</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-modal">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Member Modal -->
-    <div id="addMemberModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Add Member</h5>
-                <button type="button" class="close-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <!-- Add Member form -->
-                <form id="add-member-form">
-                    <div class="mb-3">
-                        <label for="member-name" class="form-label">Name</label>
-                        <input type="text" id="member-name" name="member-name" class="form-control" placeholder="Enter member name" required />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Add Member</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-modal">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- View Calendar Modal -->
-    <div id="viewCalendarModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Calendar</h5>
-                <button type="button" class="close-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Here is the calendar view...</p>
-                <!-- Add calendar content here -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-modal">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript Code -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get buttons and modals by their IDs
-            const addTaskButton = document.getElementById('addTaskButton');
-            const addMemberButton = document.getElementById('addMemberButton');
-            const viewCalendarButton = document.getElementById('viewCalendarButton');
-
-            const addTaskModal = document.getElementById('addTaskModal');
-            const addMemberModal = document.getElementById('addMemberModal');
-            const viewCalendarModal = document.getElementById('viewCalendarModal');
-
-            // Event listener for Add Task button
-            addTaskButton.addEventListener('click', function () {
-                addTaskModal.style.display = 'block'; // Show modal
+    <!-- Modal container -->
+<div id="modal-container" style="display: none;"></div>
+<script>script.js</script>
+<script>
+// Existing JavaScript code here
+// Wrap code in a DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to load modal content
+    function loadModalContent(url, modalId) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(htmlContent => {
+                const modalElement = document.getElementById(modalId);
+                if (modalElement) {
+                    modalElement.innerHTML = htmlContent;
+                    modalElement.style.display = 'block';
+                } else {
+                    console.error(`Modal element with ID ${modalId} not found.`);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching modal content:', error);
             });
+    }
 
-            // Event listener for Add Member button
-            addMemberButton.addEventListener('click', function () {
-                addMemberModal.style.display = 'block'; // Show modal
-            });
+    // Event listeners for buttons to open modals
+    document.getElementById('addTaskButton').addEventListener('click', function() {
+        loadModalContent('modals/addtask.html', 'modal-container');
+    });
 
-            // Event listener for View Calendar button
-            viewCalendarButton.addEventListener('click', function () {
-                viewCalendarModal.style.display = 'block'; // Show modal
-            });
+    document.getElementById('addMemberButton').addEventListener('click', function() {
+        loadModalContent('modals/addmember.html', 'modal-container');
+    });
 
-            // Add close button event handlers to modals
-            const closeButtons = document.querySelectorAll('.close-modal');
-            closeButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const modalToClose = button.closest('.modal');
-                    modalToClose.style.display = 'none'; // Hide modal
-                });
-            });
+    document.getElementById('viewCalendarButton').addEventListener('click', function() {
+        loadModalContent('modals/viewcalendar.html', 'modal-container');
+    });
+});
 
-            // Event listener for Add Task form submission
-            const addTaskForm = document.getElementById('add-task-form');
-            addTaskForm.addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent form from submitting the usual way
-                // Retrieve form data
-                const taskName = document.getElementById('task-name').value;
-                const taskAssignee = document.getElementById('task-assignee').value;
-                const taskAmount = document.getElementById('task-amount').value;
-                // TODO: Add task to the list and refresh the tasks table
-                // Perform any necessary actions such as updating the active tasks table
-
-                addTaskModal.style.display = 'none'; // Hide modal
-            });
-
-            // Event listener for Add Member form submission
-            const addMemberForm = document.getElementById('add-member-form');
-            addMemberForm.addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent form from submitting the usual way
-                // Retrieve form data
-                const memberName = document.getElementById('member-name').value;
-                // TODO: Add member to the list and refresh the members list
-                // Perform any necessary actions such as updating the members list
-                
-                addMemberModal.style.display = 'none'; // Hide modal
-            });
-        });
-    </script>
+</script>
 </body>
 
 </html>

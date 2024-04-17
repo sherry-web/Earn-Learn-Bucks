@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>View Calendar</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <!-- View Calendar Modal -->
+    <div id="viewCalendarModal" class="modal" style="display: block;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Calendar</h5>
+                <button type="button" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Here is the calendar view...</p>
+                <!-- Add calendar content here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Close modal when modal is clicked -->
+    <script>
+        document.querySelectorAll('.close-modal').forEach(button => {
+            button.addEventListener('click', () => {
+                document.getElementById('viewCalendarModal').style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
